@@ -1,20 +1,17 @@
 <?php
 namespace Cf7PushoverNotify;
 
-require_once('Hooks.php')
+require_once('pushover.php');
+require_once('hooks.php');
 
 class Plugin {
-
-    $hooks = new Hooks();
 
     public function install() {
         
     }
 
     public function registerActions() {
-        add_action('wpcf7_submit', array(&$hooks, 'onCf7Submit'));
-        add_action('admin_menu', array(&$hooks, 'settingsPage'));
-
+        add_action('wpcf7_submit', 'Cf7PushoverNotify\onCf7Submit', 10, 2);
     }
 
     public function registerFilters() {
