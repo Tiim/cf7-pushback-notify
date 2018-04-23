@@ -2,7 +2,6 @@
 namespace Cf7PushoverNotify;
 
 require_once('pushover.php');
-require_once('hooks.php');
 
 class Plugin {
 
