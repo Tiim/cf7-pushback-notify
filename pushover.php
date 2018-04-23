@@ -33,7 +33,7 @@ function send($data) {
     $push->setUser('---');
     $push->setTitle('New Contact Form Submission from ' . $data['name']);
     $push->setMessage($data['subject'] . '\n' . $data['message']);
-    $push->setPriority(-2);
+    $push->setPriority(-1);
     $go = $push->send();
     var_dump($go);
 }
