@@ -12,6 +12,7 @@
  * @license BSD License
  */
 namespace Cf7PushoverNotify;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 class Pushover
 {

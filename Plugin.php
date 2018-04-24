@@ -1,21 +1,36 @@
 <?php
 namespace Cf7PushoverNotify;
+if ( ! defined( 'ABSPATH' ) ) exit;
 
-require_once('pushover.php');
-require_once('settings.php');
+require_once('PushoverHandler.php');
+require_once('Settings.php');
+require_once('vendor/Admin-Api.php');
 
 class Plugin {
 
     public static $ns = 'Cf7PushoverNotify';
+    public $_token = 'cf7pn';
+    public $prefix = 'cf7pn_';
 
-    public function install() {
+    public function __construct($file) {
+        $this->file = $file;
+        $this->settings = new Settings($this);
+        $this->pushover = new PushoverHandler($this);
+
+        // Load API for generic admin functions
+		if ( is_admin() ) {
+			$this->admin = new Admin_API();
+        }
         
+        register_activation_hook($file, array(&$this, 'activate'));
+        register_deactivation_hook($file, array(&$this, 'deactivate'));
+
+        $this->registerActions();
+        $this->registerFilters();
     }
 
     public function registerActions() {
-        add_action('wpcf7_submit', self::$ns . '\cf7_submit', 10, 2);
-        add_action('admin_init', self::$ns .'\init_settings');
-        add_action('admin_menu', self::$ns . '\init_menu');
+        add_action('wpcf7_submit', array($this->pushover, 'submit'), 10, 2);
     }
 
     public function registerFilters() {

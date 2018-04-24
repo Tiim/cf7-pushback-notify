@@ -36,25 +36,9 @@ function Cf7PushoverNotify_PhpVersionCheck() {
 }
 
 
-/**
- * Initialize internationalization (i18n) for this plugin.
- * References:
- *      http://codex.wordpress.org/I18n_for_WordPress_Developers
- *      http://www.wdmac.com/how-to-create-a-po-language-translation#more-631
- * @return void
- */
-function Cf7PushoverNotify_i18n_init() {
-    //$pluginDir = dirname(plugin_basename(__FILE__));
-    //load_plugin_textdomain('cf7-pushover-notify', false, $pluginDir . '/languages/');
-}
-
-
 //////////////////////////////////
 // Run initialization
 /////////////////////////////////
-
-// Initialize i18n
-//add_action('plugins_loadedi','Cf7PushoverNotify_i18n_init');
 
 // Run the version check.
 // If it is successful, continue with initialization for this plugin
