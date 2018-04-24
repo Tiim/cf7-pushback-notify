@@ -42,8 +42,8 @@ class PushoverHandler {
         $title = Util::formatStr($title, $data);
         $message = Util::formatStr($message, $data);
 
-        $api_token = get_option( $this->prefix . 'pushover-api-token', null );
-        $user_token = get_option( $this->prefix . 'pushover-user-token', null );
+        $api_token = get_option( $this->prefix . 'api-token', null );
+        $user_token = get_option( $this->prefix . 'user-token', null );
 
         if (!$api_token || !$user_token) {
             return;

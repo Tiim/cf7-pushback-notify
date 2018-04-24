@@ -131,16 +131,16 @@ class Settings {
 					'label'			=> 'Subject' ,
 					'description'	=> 'Enter the subject line of the Pushover message. <br/> <a href="#">How to use variables</a>',
 					'type'			=> 'text',
-					'default'		=> 'Submission from {{title}}',
-					'placeholder'	=> 'Submission from {{title}}'
+					'default'		=> 'Submission from [title]',
+					'placeholder'	=> 'Submission from [title]'
 				),
 				array(
 					'id' 			=> 'message',
 					'label'			=> 'Text' ,
 					'description'	=> 'Enter the message of the Pushover message. <br/> <a href="#">How to use variables</a>',
 					'type'			=> 'textarea',
-					'default'		=> "{{my-name}}:\n{{message}}",
-					'placeholder'	=> '{{my-name}}:\n{{message}}'
+					'default'		=> "[my-name]:\n[message]",
+					'placeholder'	=> '[my-name]:\n[message]'
 				),
 			)
 		);
