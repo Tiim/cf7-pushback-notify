@@ -44,6 +44,6 @@ function Cf7PushoverNotify_PhpVersionCheck() {
 // If it is successful, continue with initialization for this plugin
 if (Cf7PushoverNotify_PhpVersionCheck()) {
     // Only load and run the init function if we know PHP version can parse it
-    include_once('cf7-pushover-notify_init.php');
+    include_once('src/cf7-pushover-notify-init.php');
     Cf7PushoverNotify_init(__FILE__);
 }
