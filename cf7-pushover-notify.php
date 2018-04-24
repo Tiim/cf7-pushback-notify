@@ -1,7 +1,7 @@
 <?php
 /*
    Plugin Name: Cf7 Pushover Notify
-   Plugin URI: http://wordpress.org/extend/plugins/cf7-pushover-notify/
+   Plugin URI: https://github.com/Tiim/cf7-pushover-notify
    Version: 0.1
    Author: <a href="https://tiim.github.io/">Tim Bachmann</a>
    Description: Pushover Notifications for Contact Form 7
