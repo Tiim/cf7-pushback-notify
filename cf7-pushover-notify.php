@@ -2,7 +2,7 @@
 /*
    Plugin Name: Cf7 Pushover Notify
    Plugin URI: https://github.com/Tiim/cf7-pushover-notify
-   Version: 0.1
+   Version: 0.1.0
    Author: <a href="https://tiim.github.io/">Tim Bachmann</a>
    Description: Pushover Notifications for Contact Form 7
    Text Domain: cf7-pushover-notify
