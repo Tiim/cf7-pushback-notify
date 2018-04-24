@@ -1,7 +1,7 @@
 script: 
   - mkdir temp
-  - rsync -Rr . ./temp/
-  - zip -r $TRAVIS_BUILD_DIR/cf7-pushover-notify.zip temp -x "temp/temp/*" "temp/.git/*"
+  - rsync -Rr . ./cf7-pushover-notify/
+  - zip -r $TRAVIS_BUILD_DIR/cf7-pushover-notify.zip cf7-pushover-notify -x "cf7-pushover-notify/cf7-pushover-notify/*" "cf7-pushover-notify/.git/*"
 
 deploy:
   provider: releases
