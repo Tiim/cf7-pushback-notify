@@ -1,5 +1,8 @@
 # Cf7 Pushover Notify
+[![Build Status](https://travis-ci.org/Tiim/cf7-pushover-notify.svg?branch=master)](https://travis-ci.org/Tiim/cf7-pushover-notify)
+
 by [Tim Bachmann](https://tiim.github.io/)
+
 _Pushover, CF7, Contact Form 7, Notify, Push_
 
 License: GPLv3
