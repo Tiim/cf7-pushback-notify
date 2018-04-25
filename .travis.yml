@@ -1,7 +1,13 @@
+before_script:
+  - REPO="$(echo $TRAVIS_REPO_SLUG | cut -d'/' -f2)"
+
 script: 
-  - mkdir temp
-  - rsync -Rr . ./cf7-pushover-notify/
-  - zip -r $TRAVIS_BUILD_DIR/cf7-pushover-notify.zip cf7-pushover-notify -x "cf7-pushover-notify/cf7-pushover-notify/*" "cf7-pushover-notify/.git/*"
+  - echo Generating zip file for plugin $REPO
+  - mkdir $REPO
+  - rsync -Rr . ./$REPO/
+  - rm -rf ./$REPO/$REPO ./$REPO/.git
+  - zip -r $TRAVIS_BUILD_DIR/$REPO.zip $REPO
+  - unzip -l $REPO.zip
 
 deploy:
   provider: releases
